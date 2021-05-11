@@ -74,7 +74,7 @@
                             </svg>
                         </i>
                     </button>
-                    <button type="button" class="btn btn-success" formaction="">
+                    <button type="submit" class="btn btn-success" formaction="{{ route('memo.update') }}">
                         <i class="fas fa-save">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
