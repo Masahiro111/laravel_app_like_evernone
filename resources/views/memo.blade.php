@@ -65,7 +65,7 @@
                 @csrf
                 <input type="hidden" name="edit_id" value="{{ $select_memo->id }}" />
                 <div id="memo-menu">
-                    <button type="button" class="btn btn-danger" formaction="">
+                    <button type="submit" class="btn btn-danger" formaction="{{ route('memo.delete') }}">
                         <i class="fas fa-trash-alt">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
