@@ -10,7 +10,14 @@ class MemoController extends Controller
 {
     public function index()
     {
-        return view('memo');
+        // return view('memo');
+
+        $memos = Memo::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+
+        return view('memo', [
+            'name' => $this->getLoginUserName(),
+            'memos' => $memos
+        ]);
     }
 
     public function add()
@@ -22,5 +29,21 @@ class MemoController extends Controller
         ]);
 
         return redirect()->route('memo.index');
+    }
+
+    private function getLoginUserName()
+    {
+        $user = Auth::user();
+
+        $name = '';
+        if ($user) {
+            if (7 < mb_strlen($user->name)) {
+                $name = mb_substr($user->name, 0, 7) . "...";
+            } else {
+                $name = $user->name;
+            }
+        }
+
+        return $name;
     }
 }
