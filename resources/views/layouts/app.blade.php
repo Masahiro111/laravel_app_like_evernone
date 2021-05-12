@@ -55,7 +55,7 @@
             font-size: 1.2em;
             resize: none;
             overflow-y: auto;
-            height: 85%;
+            height: 85vh;
         }
 
         #memo-content textarea {

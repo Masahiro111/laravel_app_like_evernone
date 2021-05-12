@@ -18,7 +18,7 @@
                             </svg>
                         </i>
                     </a>
-                    <a href="{{ route('login.index') }}" class="btn btn-dark">
+                    <a href="{{ route('memo.logout') }}" class="btn btn-dark">
                         <i class="fas fa-sign-out-alt">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
